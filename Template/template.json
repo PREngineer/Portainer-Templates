@@ -3247,53 +3247,6 @@
   },
   {
     "type": 1,
-    "title": "Sonarr - armhf",
-    "name": "Sonarr",
-    "description": "Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.",
-    "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/sonarr-icon.png",
-    "image": "linuxserver/sonarr:arm32v7-latest",
-    "categories": [
-      "Downloaders",
-      "TV"
-    ],
-    "platform": "linux",
-    "restart_policy": "unless-stopped",
-    "ports": [
-      "8079:8989/tcp"
-    ],
-    "volumes": [
-      {
-        "container": "/config",
-        "bind": "/Docker/Config/Sonarr"
-      },
-      {
-        "container": "/dev/rtc",
-        "bind": "/dev/rtc"
-      },
-      {
-        "container": "/tv",
-        "bind": "/Media/TV"
-      },
-      {
-        "container": "/downloads",
-        "bind": "/Media/Incoming/complete"
-      }
-    ],
-    "env": [
-      {
-        "name": "PUID",
-        "label": "PUID",
-        "default": "1000"
-      },
-      {
-        "name": "PGID",
-        "label": "PGID",
-        "default": "1000"
-      }
-    ]
-  },
-  {
-    "type": 1,
     "title": "SyncThing",
     "name": "syncthing",
     "description": null,
