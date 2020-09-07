@@ -2825,6 +2825,16 @@
 			"name": "PGID",
 			"label": "PGID",
 			"default": "1000"
+		  },
+		  {
+			"name": "TZ",
+			"label": "TZ",
+			"default": "America/New_York"
+		  },
+		  {
+			"name": "UMASK_SET",
+			"label": "UMASK_SET",
+			"default": "077"
 		  }
 		]
 	  },
