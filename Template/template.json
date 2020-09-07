@@ -2794,7 +2794,7 @@
 		"name": "qbittorrent",
 		"description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.",
 		"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
-		"image": "linuxserver/qbittorrent:arm64v8-latest",
+		"image": "linuxserver/qbittorrent:latest",
 		"categories": [
 		  "Downloaders"
 		],
