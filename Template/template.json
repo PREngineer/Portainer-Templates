@@ -2835,6 +2835,76 @@
 	  },
 	  {
 		"type": 1,
+		"title": "qBittorrent-vpn",
+		"name": "qbittorrent with VPN",
+		"description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library. This container connects through a VPN for safe torrenting.",
+		"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
+		"image": "guillaumedsde/alpine-qbittorrent-openvpn:latest",
+		"categories": [
+		  "Downloaders"
+		],
+		"platform": "linux",
+		"restart_policy": "unless-stopped",
+		"ports": [
+		  "6881:6881/tcp",
+		  "6881:6881/udp",
+		  "8080:8080/tcp"
+		],
+		"volumes": [
+		  {
+			"container": "/config",
+			"bind": "/portainer/Config/qBittorrent"
+		  },
+		  {
+			"container": "/downloads",
+			"bind": "/portainer/Downloads"
+		  }
+		],
+		"env": [
+		  {
+			"name": "PUID",
+			"label": "PUID",
+			"default": "1000"
+		  },
+		  {
+			"name": "PGID",
+			"label": "PGID",
+			"default": "1000"
+		  },
+		  {
+			"name": "TZ",
+			"label": "TZ",
+			"default": "America/New_York"
+		  },
+		  {
+			"name":"OPENVPN_PROVIDER",
+			"label":"OPENVPN_PROVIDER",
+			"default":"PIA"
+		  },
+		  {
+			"name":"OPENVPN_CONFIG",
+			"label":"OPENVPN_CONFIG",
+			"default":"US Washington DC"
+		  },
+		  {
+			"name":"OPENVPN_USERNAME",
+			"label":"OPENVPN_USERNAME",
+			"default":"username"
+		  },
+		  {
+			"name":"OPENVPN_PASSWORD",
+			"label":"OPENVPN_PASSWORD",
+			"default":"password"
+		  },
+		  {
+			"name":"LAN",
+			"label":"LAN",
+			"default":"192.168.1.0/24"
+		  }
+		]
+	  },
+	  {
+		"type": 1,
 		"title": "Quassel IRC",
 		"name": "quassel-core",
 		"description": "Quassel IRC is a modern, cross-platform, distributed IRC client, meaning that one (or multiple) client(s) can attach to and detach from a central core -- much like the popular combination of screen and a text-based IRC client such as WeeChat, but graphical. Blowfish support and optional web-ui included.",
