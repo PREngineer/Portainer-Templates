@@ -2850,7 +2850,7 @@
 		  "6881:6881/udp",
 		  "8080:8080/tcp"
 		],
-		"cap-add": "NET_ADMIN",
+		"cap_add": "NET_ADMIN",
 		"volumes": [
 		  {
 			"container": "/config",
