@@ -2835,8 +2835,8 @@
 	  },
 	  {
 		"type": 1,
-		"title": "qBittorrent with VPN",
-		"name": "qbittorrent-vpn",
+		"title": "qBittorrent-vpn",
+		"name": "qBittorrent-vpn",
 		"description": "The qBittorrent project aims to provide an open-source software alternative to µTorrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library. This container connects through a VPN for safe torrenting.",
 		"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/qbittorrent-icon.png",
 		"image": "guillaumedsde/alpine-qbittorrent-openvpn:latest",
