@@ -2851,7 +2851,7 @@
 		  "8080:8080/tcp"
 		],
 		"cap_add": [
-			"NET_ADMIN"
+			"ALL"
 		],
 		"volumes": [
 		  {
