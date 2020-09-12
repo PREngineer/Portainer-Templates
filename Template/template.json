@@ -294,15 +294,19 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Files/AppData/Config/Headphones"
+			"bind": "/Headphones"
 		  },
 		  {
 			"container": "/Downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
 		  },
 		  {
 			"container": "/music",
-			"bind": "/portainer/Music"
+			"bind": "/Music"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -472,11 +476,15 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Files/AppData/Config/Jackett"
+			"bind": "/Jackett"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -593,13 +601,20 @@
 		],
 		"volumes": [
 		  {
-			"container": "/config"
+			"container": "/config",
+			"bind": "/LazyLibrarian"
 		  },
 		  {
-			"container": "/downloads"
+			"container": "/downloads",
+			"bind": "/downloads"
 		  },
 		  {
-			"container": "/books"
+			"container": "/books",
+			"bind": "/Books"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -1113,15 +1128,19 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Files/AppData/Config/Mylar"
+			"bind": "/Mylar"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
 		  },
 		  {
 			"container": "/comics",
-			"bind": "/portainer/Comics"
+			"bind": "/Comics"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -2808,11 +2827,19 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Files/AppData/Config/qBittorrent"
+			"bind": "/QBitTorrent"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
+		  },
+		  {
+			"container": "/incomplete-torrents",
+			"bind": "/incomplete-torrents"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -2856,11 +2883,19 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Config/qBittorrent"
+			"bind": "/QBitTorrent"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
+		  },
+		  {
+			"container": "/incomplete-torrents",
+			"bind": "/incomplete-torrents"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -2959,15 +2994,19 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Files/AppData/Config/Radarr"
+			"bind": "/Radarr"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
 		  },
 		  {
 			"container": "/movies",
-			"bind": "/portainer/Movies"
+			"bind": "/Movies"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -3106,15 +3145,19 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/portainer/Files/AppData/Config/Sabnzbd"
+			"bind": "/Sabnzbd"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/portainer/Downloads"
+			"bind": "/complete"
 		  },
 		  {
-			"container": "/incomplete-downloads",
-			"bind": "/portainer/Downloads/incomplete"
+			"container": "/incomplete-nzbs",
+			"bind": "/incomplete-nzbs"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
@@ -3296,7 +3339,7 @@
 		"volumes": [
 		  {
 			"container": "/config",
-			"bind": "/Docker/Config/Sonarr"
+			"bind": "/Sonarr"
 		  },
 		  {
 			"container": "/dev/rtc",
@@ -3304,11 +3347,15 @@
 		  },
 		  {
 			"container": "/tv",
-			"bind": "/Media/TV"
+			"bind": "/TV"
 		  },
 		  {
 			"container": "/downloads",
-			"bind": "/Media/Incoming/complete"
+			"bind": "/complete"
+		  },
+		  {
+			"container": "/tors-nzbs",
+			"bind": "/tors-nzbs"
 		  }
 		],
 		"env": [
