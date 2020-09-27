@@ -4952,24 +4952,62 @@
 			}
 		},
 		{
-			"type": 2,
+			"type": 1,
 			"title": "Wordpress",
-			"description": "Wordpress setup with a MySQL database",
-			"note": "Deploys a Wordpress instance connected to a MySQL database.",
+			"name": "Wordpress",
+			"description": "Wordpress setup where you specify a database server, and a location for the HTML folder.",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
+			"image": "wordpress",
 			"categories": [
-				"CMS"
+			  "CMS"
 			],
 			"platform": "linux",
-			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
-			"repository": {
-				"url": "https://github.com/portainer/templates",
-				"stackfile": "stacks/wordpress/docker-stack.yml"
-			},
-			"env": [{
-				"name": "MYSQL_DATABASE_PASSWORD",
-				"label": "Database root password",
-				"description": "Password used by the MySQL root user."
-			}]
+			"restart_policy": "unless-stopped",
+			"ports": [
+			  "8088:8080/tcp"
+			],
+			"volumes": [
+			  {
+				"container": "/var/lib/mysql",
+				"bind": "/Pis/WordPressDB"
+			  },
+			  {
+				"container": "/var/www/html",
+				"bind": "/Pis/WordPress"
+			  }
+			],
+			"env": [
+			  {
+				"name": "PUID",
+				"label": "PUID",
+				"default": "1000"
+			  },
+			  {
+				"name": "PGID",
+				"label": "PGID",
+				"default": "1000"
+			  },
+			  {
+				"name": "WORDPRESS_DB_HOST",
+				"label": "Wordpress DB Host",
+				"default": "10.0.0.80"
+			  },
+			  {
+				"name": "WORDPRESS_DB_USER",
+				"label": "Wordpress DB User",
+				"default": "user"
+			  },
+			  {
+				"name": "WORDPRESS_DB_PASSWORD",
+				"label": "Wordpress DB Password",
+				"default": "password"
+			  },
+			  {
+				"name": "WORDPRESS_DB_NAME",
+				"label": "Wordpress DB Name",
+				"default": "WordPress"
+			  }
+			]
 		},
 		{
 			"type": 3,
