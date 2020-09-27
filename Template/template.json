@@ -4968,10 +4968,6 @@
 			],
 			"volumes": [
 			  {
-				"container": "/var/lib/mysql",
-				"bind": "/Pis/WordPressDB"
-			  },
-			  {
 				"container": "/var/www/html",
 				"bind": "/Pis/WordPress"
 			  }
